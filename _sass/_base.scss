@@ -9,9 +9,10 @@ body {
 }
 
 hr {
-  border-color: $theme-primary;
-  border-width: 3px;
-  max-width: 50px;
+  border-color: $theme-dark;
+  border-width: 5px;
+  max-width: 30%;
+  border-radius: 16px;
 }
 
 hr.light {
@@ -37,7 +38,7 @@ h6 {
 }
 
 p {
-  font-size: 16px;
+  font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
   line-height: 1.5;
   margin-bottom: 20px;
 }
@@ -48,17 +49,27 @@ p {
 
 .bg-dark {
   background-color: $theme-dark;
-  color: white;
+  color: #fafafa;
 }
 
 .text-faded {
-  color: rgba(white, 0.7);
+  color: rgba(#fafafa, 0.7);
 }
 
 section {
   padding: 100px 0;
 }
 
+#about{
+  border-radius: 0 0 1.6vw 10vw;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+#blog aside{
+  border-radius: 0 0 10vw 1.6vw;
+}
+#portfolio{
+  box-shadow: 19px 0 38px rgba(0,0,0,0.30), 15px 0 12px rgba(0,0,0,0.22);
+}
 aside {
   padding: 50px 0;
 }
@@ -66,15 +77,18 @@ aside {
 .no-padding {
   padding: 0;
 }
-
 // Navigation
 
 .navbar-default {
-  background-color: white;
-  border-color: rgba($theme-dark, 0.5);
+  border-bottom: 6px solid rgba($theme-dark, 1);
   @include sans-serif-font;
   @include transition-all;
   .navbar-header .navbar-brand {
+    img{
+      display: inline;
+    }
+
+    display: inline;
     color: $theme-primary;
     @include sans-serif-font;
     font-weight: 700;
@@ -155,10 +169,10 @@ header {
   min-height: auto;
   @include background-cover;
   background-position: center;
-  background-image: 
-    url("../img/perfil.png");
+  background-image: linear-gradient(0deg, rgba(21, 25, 101, 1), rgba(70, 181, 209,0.3)),
+    url("../img/header.jpg");
   text-align: center;
-  color: white;
+  color: #fafafa;
   .header-content {
     position: relative;
     text-align: center;
@@ -176,8 +190,8 @@ header {
       }
       p {
         font-weight: 300;
+        font-size: 22px !important;
         color: rgba(white, 0.7);
-        font-size: 16px;
         margin-bottom: 50px;
       }
     }
@@ -232,7 +246,7 @@ header {
     color: white;
     opacity: 0;
     display: block;
-    background: rgba($theme-primary, 0.9);
+    background:linear-gradient(0deg, rgba($theme-primary, 0.9), rgba($theme-dark,0.7));
     position: absolute;
     bottom: 0;
     text-align: center;
@@ -253,28 +267,16 @@ header {
       .project-category {
         text-transform: uppercase;
         font-weight: 600;
-        font-size: 14px;
+        font-size: calc(16px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
       }
       .project-name {
-        font-size: 18px;
+        font-size: calc(18px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
       }
     }
   }
   &:hover {
     .portfolio-box-caption {
       opacity: 1;
-    }
-  }
-  @media (min-width: 768px) {
-    .portfolio-box-caption {
-      .portfolio-box-caption-content {
-        .project-category {
-          font-size: 16px;
-        }
-        .project-name {
-          font-size: 22px;
-        }
-      }
     }
   }
 }
@@ -298,24 +300,36 @@ header {
 // Button Styles
 .btn-default {
   @include button-variant($theme-dark, white, white);
+  background: linear-gradient(45deg, #e1e1e1, #ffffff) !important;
+  box-shadow:  20px -20px 60px #080a28, 
+  -20px 20px 60px #2228a2;
 }
 
 .btn-primary {
   @include button-variant(white, $theme-primary, $theme-primary);
+  box-shadow:  20px -20px 60px #1c4854, 
+  -20px 20px 60px #70ffff;
+
+
 }
 
 .btn {
+  transition: 200ms;
   @include sans-serif-font;
   border: none;
-  border-radius: 300px;
+  border-radius: 25px 150px 25px 150px;
   font-weight: 700;
   text-transform: uppercase;
+  margin-top: 60px;
 }
 
 .btn-xl {
   padding: 15px 30px;
 }
 
+.btn:hover{
+  transform: scale(1.2);
+}
 // Contact
 #contact .fa,
 #contact .fab {
