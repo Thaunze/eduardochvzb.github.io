@@ -62,7 +62,7 @@ const PROJECTS = [
         2,
         'Bar chart',
         13,
-        'https://eduardochvzb.github.io/barChartGDP/',
+        'https://echvzb.github.io/barChartGDP/',
     ],
     [
         1,
@@ -74,7 +74,7 @@ const PROJECTS = [
         0,
         'Weather App',
         19,
-        'https://eduardochvzb.github.io/weatherApp/'
+        'https://echvzb.github.io/weatherApp/'
     ],
     [
         3,
@@ -86,7 +86,7 @@ const PROJECTS = [
         0,
         'Tribute Page',
         2,
-        'https://eduardochvzb.github.io/alfredoJalife/'
+        'https://echvzb.github.io/alfredoJalife/'
     ],
     [
         1,
@@ -110,7 +110,7 @@ const PROJECTS = [
         2,
         'Scatter Plot',
         14,
-        'https://eduardochvzb.github.io/scatterPlotDoping/'
+        'https://echvzb.github.io/scatterPlotDoping/'
     ],
     [
         1,
@@ -122,7 +122,7 @@ const PROJECTS = [
         0,
         'Product Landing Page',
         8,
-        'https://eduardochvzb.github.io/ProductPage/'
+        'https://echvzb.github.io/ProductPage/'
     ],
     [
         3,
@@ -140,7 +140,7 @@ const PROJECTS = [
         2,
         'Heat Map',
         15,
-        'https://eduardochvzb.github.io/heatMap/'
+        'https://echvzb.github.io/heatMap/'
     ],
     [
         1,
@@ -164,13 +164,13 @@ const PROJECTS = [
         2,
         'Choropleth Map',
         16,
-        'https://eduardochvzb.github.io/us-education-ChroplethMap/'
+        'https://echvzb.github.io/us-education-ChroplethMap/'
     ],
     [
         0,
         'Survey Form',
         7,
-        'https://eduardochvzb.github.io/SurveyForm/'
+        'https://echvzb.github.io/SurveyForm/'
     ],
 ]
 

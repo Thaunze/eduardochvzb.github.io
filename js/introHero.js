@@ -1,10 +1,10 @@
 const displayBodyChildren = () => {
     document.body.childNodes.forEach(child => {
-        if (child.classList) child.classList.toggle('no-display-intro');
+        if (child.classList) child.classList.remove('no-display-intro');
+        console.log(child);
     });
 }
 export default () => {
-    displayBodyChildren();
 
     const introHeroElem = document.createElement("div");
     const logo = document.createElement("div");
